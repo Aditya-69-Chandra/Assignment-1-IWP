@@ -9,9 +9,9 @@
   <style>
     .team-cards {
       display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
+      min-height: 330px; /* Center card vertically in viewport */
       justify-content: center;
+      align-items: center;
       margin: 40px 0 32px 0;
     }
     .member-card {
@@ -22,12 +22,14 @@
       min-width: 230px;
       max-width: 270px;
       text-align: center;
+      word-break: break-word;
+      margin: 0 auto;
     }
     .member-name {
       font-size: 1.25rem;
       color: #1260cc;
       font-weight: bold;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
     .member-email {
       margin-bottom: 12px;
@@ -38,7 +40,9 @@
       font-size: 1.08rem;
       color: #333;
       cursor: pointer;
-      transition: color 0.18s;
+      transition: color 0.16s;
+      word-break: break-all;
+      text-align: center;
     }
     .member-email:hover { color: #1260cc; }
     .member-icons {
@@ -59,9 +63,9 @@
       margin-left: 9px;
       display: none;
     }
-    @media (max-width: 800px){
-      .team-cards { flex-direction: column; align-items:center; }
-      .member-card { min-width:unset; max-width:99vw; }
+    @media (max-width: 500px){
+      .member-card { min-width: unset; max-width:97vw; }
+      .team-cards { min-height: unset; }
     }
   </style>
   <script>
@@ -93,7 +97,7 @@
   <main>
     <section class="hero">
       <h2 style="color:#1260cc;">About the Project Team</h2>
-      <p>Meet the creators behind this demo project!</p>
+      <p>Meet the creator behind this demo project!</p>
     </section>
     <section class="team-cards">
       <div class="member-card">
@@ -114,4 +118,3 @@
   </footer>
 </body>
 </html>
-
