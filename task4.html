@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4 – Interactive Periodic Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/periodic.css">
+  <script src="js/periodic.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Project Portal</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="task1.html">Personal Website</a></li>
+      <li><a href="task2.html">IRCTC Analysis</a></li>
+      <li><a href="task3.html">Alphabet Chart</a></li>
+      <li><a href="task4.html">Periodic Table</a></li>
+      <li><a href="task5.html">Course Registration</a></li>
+      <li><a href="task6.html">Library System</a></li>
+      <li><a href="task7.html">Marks Display</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h2 style="color:#1260cc;">Interactive Periodic Table</h2>
+      <p>Click any element to view details!</p>
+    </section>
+    <section>
+      <div class="periodic-table" id="periodicTable">
+        <!-- Elements will be generated via JS -->
+      </div>
+      <!-- Popup for element details -->
+      <div class="element-popup" id="elementPopup" style="display:none;">
+        <h2 id="elSymbol" class="el-symbol"></h2>
+        <h3 id="elName"></h3>
+        <div class="el-info">
+          <p><strong>Atomic Number:</strong> <span id="elNumber"></span></p>
+          <p><strong>Atomic Mass:</strong> <span id="elMass"></span></p>
+          <p><strong>Category:</strong> <span id="elCategory"></span></p>
+        </div>
+        <button class="close-btn" onclick="closeElementPopup()">Close</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>VIT Project &copy; 2025</p>
+  </footer>
+</body>
+</html>

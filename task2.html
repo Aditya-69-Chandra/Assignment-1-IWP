@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 – IRCTC Website Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .booking-demo {
+      background: #f4faff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #b5ceee2e;
+      padding: 22px 18px 14px 18px;
+      max-width: 400px;
+      margin: 26px auto;
+      text-align: left;
+    }
+    .booking-demo label {
+      display: block;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+    .booking-demo input, .booking-demo select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 3px;
+      border-radius: 9px;
+      border: 1px solid #bad2f7;
+      margin-bottom: 12px;
+      background: #fff;
+    }
+    .booking-demo button {
+      background: #1260cc;
+      color: #fff;
+      padding: 11px 20px;
+      border-radius: 20px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 1px 4px #cce6ff52;
+      font-size: 1.13rem;
+      letter-spacing: 1px;
+      transition: background 0.18s;
+    }
+    .booking-demo button:hover { background: #094383; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Project Portal</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="task1.html">Personal Website</a></li>
+      <li><a href="task2.html">IRCTC Analysis</a></li>
+      <li><a href="task3.html">Alphabet Chart</a></li>
+      <li><a href="task4.html">Periodic Table</a></li>
+      <li><a href="task5.html">Course Registration</a></li>
+      <li><a href="task6.html">Library System</a></li>
+      <li><a href="task7.html">Marks Display</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h2 style="color:#1260cc;">IRCTC Website Analysis & Improvement</h2>
+      <p>The IRCTC website is a crucial portal for train ticket booking and travel information in India. Here’s a brief analysis and a live “improved” demo:</p>
+      
+      <h3>Current Positive Features</h3>
+      <ul>
+        <li>Quick train search and booking interface.</li>
+        <li>Multiple language support.</li>
+        <li>Secure login & payment gateway.</li>
+      </ul>
+      
+      <h3>Improvement Suggestions</h3>
+      <ul>
+        <li>Modernize UI using cleaner layouts and better spacing.</li>
+        <li>Improve accessibility (larger fonts, contrast, ARIA labels).</li>
+        <li>Add responsive design for mobile users.</li>
+        <li>Use icons for action buttons (Font Awesome).</li>
+        <li>Reduce load time by optimizing images and assets.</li>
+        <li>Provide interactive maps for travel routes.</li>
+      </ul>
+      
+      <h3>Improved IRCTC Booking Demo</h3>
+      <form class="booking-demo">
+        <label for="from"><i class="fa fa-train"></i> From</label>
+        <input type="text" id="from" placeholder="Enter Departure Station" required>
+        <label for="to"><i class="fa fa-map-marker-alt"></i> To</label>
+        <input type="text" id="to" placeholder="Enter Destination Station" required>
+        <label for="date"><i class="fa fa-calendar"></i> Date</label>
+        <input type="date" id="date" required>
+        <label for="class"><i class="fa fa-suitcase"></i> Class</label>
+        <select id="class">
+          <option>Sleeper</option>
+          <option>2A (AC)</option>
+          <option>3A (AC)</option>
+          <option>First AC</option>
+          <option>CC (Chair Car)</option>
+        </select>
+        <button type="submit">
+          <i class="fa fa-search"></i> Search Trains
+        </button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>VIT Project &copy; 2025</p>
+  </footer>
+</body>
+</html>

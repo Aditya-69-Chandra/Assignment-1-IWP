@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7 – Student Marks Card Display</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .marks-card {
+      background: #f4faff;
+      border-radius: 20px;
+      box-shadow: 0 2px 14px #b5ceee37;
+      padding: 26px 17px 19px 17px;
+      max-width: 410px;
+      margin: 34px auto;
+      text-align: left;
+    }
+    .marks-card-header {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #1260cc;
+      font-size: 1.34rem;
+      font-weight: 600;
+    }
+    .marks-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #eaf0fb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .marks-table th, .marks-table td {
+      border-bottom: 1px solid #bad2f7;
+      padding: 8px 6px;
+      font-size: 1.06rem;
+      text-align: left;
+    }
+    .marks-table th { background: #d7e6ff; }
+    .marks-table tr:last-child td { border-bottom: none; }
+    .total-row td {
+      font-weight: bold;
+      color: #1260cc;
+      background: #eaf0fb;
+    }
+    .remark {
+      text-align: right;
+      font-size: 1.11rem;
+      color: #229933;
+      margin-top: 13px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Project Portal</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="task1.html">Personal Website</a></li>
+      <li><a href="task2.html">IRCTC Analysis</a></li>
+      <li><a href="task3.html">Alphabet Chart</a></li>
+      <li><a href="task4.html">Periodic Table</a></li>
+      <li><a href="task5.html">Course Registration</a></li>
+      <li><a href="task6.html">Library System</a></li>
+      <li><a href="task7.html">Marks Display</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h2 style="color:#1260cc;">Student Marks Card Display</h2>
+      <p>Here is a demo marks table for a student.</p>
+    </section>
+    <section>
+      <div class="marks-card">
+        <div class="marks-card-header"><i class="fa fa-id-card"></i> Semester Results</div>
+        <table class="marks-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Marks (out of 100)</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mathematics</td><td>88</td><td>A</td>
+            </tr>
+            <tr>
+              <td>Physics</td><td>79</td><td>B+</td>
+            </tr>
+            <tr>
+              <td>Chemistry</td><td>92</td><td>A+</td>
+            </tr>
+            <tr>
+              <td>Computer Science</td><td>95</td><td>A+</td>
+            </tr>
+            <tr>
+              <td>English</td><td>82</td><td>A</td>
+            </tr>
+            <tr class="total-row">
+              <td>Total</td><td>436</td><td>A+</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="remark">Remark: Excellent Performance!</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>VIT Project &copy; 2025</p>
+  </footer>
+</body>
+</html>

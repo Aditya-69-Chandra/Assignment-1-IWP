@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us – VIT Project Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .team-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin: 40px 0 32px 0;
+    }
+    .member-card {
+      background: #f4faff;
+      border-radius: 20px;
+      box-shadow: 0 2px 14px #b5ceee37;
+      padding: 30px 22px 21px 22px;
+      min-width: 230px;
+      max-width: 270px;
+      text-align: center;
+    }
+    .member-name {
+      font-size: 1.25rem;
+      color: #1260cc;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .member-email {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 1.08rem;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.18s;
+    }
+    .member-email:hover { color: #1260cc; }
+    .member-icons {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 7px;
+    }
+    .member-icons a {
+      color: #333;
+      font-size: 1.38rem;
+      transition: color 0.16s;
+    }
+    .member-icons a:hover { color: #1260cc; }
+    .copy-message {
+      color: #39c279;
+      font-size: 0.99rem;
+      margin-left: 9px;
+      display: none;
+    }
+    @media (max-width: 800px){
+      .team-cards { flex-direction: column; align-items:center; }
+      .member-card { min-width:unset; max-width:99vw; }
+    }
+  </style>
+  <script>
+    function copyEmail(id, msgId) {
+      const emailText = document.getElementById(id).getAttribute("data-email");
+      navigator.clipboard.writeText(emailText).then(()=>{
+        const msg = document.getElementById(msgId);
+        msg.style.display = 'inline';
+        setTimeout(()=>{msg.style.display='none';},1500);
+      });
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">VIT Project Portal</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="task1.html">Personal Website</a></li>
+      <li><a href="task2.html">IRCTC Analysis</a></li>
+      <li><a href="task3.html">Alphabet Chart</a></li>
+      <li><a href="task4.html">Periodic Table</a></li>
+      <li><a href="task5.html">Course Registration</a></li>
+      <li><a href="task6.html">Library System</a></li>
+      <li><a href="task7.html">Marks Display</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h2 style="color:#1260cc;">About the Project Team</h2>
+      <p>Meet the creators behind this demo project!</p>
+    </section>
+    <section class="team-cards">
+      <div class="member-card">
+        <div class="member-name">Aditya Chandra</div>
+        <div id="email1" class="member-email" data-email="adityachandra.work.cs@gmail.com" onclick="copyEmail('email1','msg1')">
+          <i class="fa-solid fa-envelope"></i> adityachandra.work.cs@gmail.com
+          <span id="msg1" class="copy-message">Copied!</span>
+        </div>
+        <div class="member-icons">
+          <a href="https://github.com/Aditya-69-Chandra" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/aditya-chandra-303b93331/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-name">Abhishek</div>
+        <div id="email2" class="member-email" data-email="abhishekrajliwal123@gmail.com" onclick="copyEmail('email2','msg2')">
+          <i class="fa-solid fa-envelope"></i> abhishekrajliwal123@gmail.com
+          <span id="msg2" class="copy-message">Copied!</span>
+        </div>
+        <div class="member-icons">
+          <a href="https://github.com/exampleRiya" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/exampleRiya" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-name">Prashant Raj</div>
+        <div id="email3" class="member-email" data-email="iamalokraj05@gmail.com" onclick="copyEmail('email3','msg3')">
+          <i class="fa-solid fa-envelope"></i> iamalokraj05@gmail.com
+          <span id="msg3" class="copy-message">Copied!</span>
+        </div>
+        <div class="member-icons">
+          <a href="https://github.com/testSam" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/testSam" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>VIT Project &copy; 2025</p>
+  </footer>
+</body>
+</html>

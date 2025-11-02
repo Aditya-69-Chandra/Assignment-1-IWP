@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5 – Course Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .reg-form {
+      background: #f4faff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #b5ceee37;
+      padding: 28px 22px 15px 22px;
+      max-width: 480px;
+      margin: 32px auto;
+      text-align: left;
+    }
+    .reg-form label {
+      display: block;
+      margin-top: 9px;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .reg-form input[type="text"],
+    .reg-form input[type="email"] {
+      width: 100%;
+      padding: 9px;
+      border-radius: 9px;
+      border: 1px solid #bad2f7;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    .form-fieldset {
+      margin-top: 14px;
+      margin-bottom: 8px;
+      padding-left: 12px;
+      padding-right: 3px;
+      background: #eaf0fb;
+      border-radius: 10px;
+      border: 1px solid #bad2f7;
+    }
+    .reg-form .courses-list {
+      column-count: 2;
+      column-gap: 25px;
+      margin-bottom: 16px;
+    }
+    .reg-form input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    .reg-form .submit-btn {
+      background: #1260cc;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 14px;
+      border: none;
+      padding: 14px 22px;
+      font-size: 1.18rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #aecffb22;
+      transition: background 0.18s;
+      width: 100%;
+      margin-top: 16px;
+    }
+    .reg-form .submit-btn:hover { background: #094383; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Project Portal</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="task1.html">Personal Website</a></li>
+      <li><a href="task2.html">IRCTC Analysis</a></li>
+      <li><a href="task3.html">Alphabet Chart</a></li>
+      <li><a href="task4.html">Periodic Table</a></li>
+      <li><a href="task5.html">Course Registration</a></li>
+      <li><a href="task6.html">Library System</a></li>
+      <li><a href="task7.html">Marks Display</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h2 style="color:#1260cc;">Student Course Registration</h2>
+      <p>Register for your preferred courses at VIT Bhopal. Select your courses and submit!</p>
+    </section>
+    <section>
+      <form class="reg-form">
+        <label for="studentName">Name</label>
+        <input type="text" id="studentName" name="studentName" required>
+        
+        <label for="studentEmail">Email</label>
+        <input type="email" id="studentEmail" name="studentEmail" required>
+        
+        <fieldset class="form-fieldset">
+          <legend>Select Courses:</legend>
+          <div class="courses-list">
+            <label><input type="checkbox" name="courses" value="Aerospace Engineering">Aerospace Engineering</label>
+            <label><input type="checkbox" name="courses" value="Bioengineering">Bioengineering</label>
+            <label><input type="checkbox" name="courses" value="Biotechnology">Biotechnology</label>
+            <label><input type="checkbox" name="courses" value="Chemical Engineering">Chemical Engineering</label>
+            <label><input type="checkbox" name="courses" value="Civil Engineering">Civil Engineering</label>
+            <label><input type="checkbox" name="courses" value="Computer Science & Engineering">Computer Science & Engineering</label>
+            <label><input type="checkbox" name="courses" value="CSE (Artificial Intelligence)">CSE (Artificial Intelligence)</label>
+            <label><input type="checkbox" name="courses" value="CSE (Cyber Security)">CSE (Cyber Security)</label>
+            <label><input type="checkbox" name="courses" value="CSE (Cloud Computing)">CSE (Cloud Computing)</label>
+            <label><input type="checkbox" name="courses" value="CSE (Education Technology)">CSE (Education Technology)</label>
+            <label><input type="checkbox" name="courses" value="CSE (Gaming Technology)">CSE (Gaming Technology)</label>
+            <label><input type="checkbox" name="courses" value="CSE (Health Informatics)">CSE (Health Informatics)</label>
+            <label><input type="checkbox" name="courses" value="CSE (E-Commerce Technology)">CSE (E-Commerce Technology)</label>
+            <label><input type="checkbox" name="courses" value="Electronics & Communication Engg">Electronics & Communication Engg</label>
+            <label><input type="checkbox" name="courses" value="ECE (AI & Cybernetics)">ECE (AI & Cybernetics)</label>
+            <label><input type="checkbox" name="courses" value="Mechanical Engineering">Mechanical Engineering</label>
+            <label><input type="checkbox" name="courses" value="ME (AI & Robotics)">ME (AI & Robotics)</label>
+          </div>
+        </fieldset>
+        
+        <label><input type="checkbox" name="agree" required> I confirm the details above are correct.</label>
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>VIT Project &copy; 2025</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 6 – Library Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .library-container {
+      background: #f4faff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #b5ceee37;
+      padding: 28px 22px 18px 22px;
+      max-width: 560px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .library-header {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #1260cc;
+    }
+    .lib-search {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 19px;
+      align-items: center;
+    }
+    .lib-search input {
+      flex: 1;
+      padding: 7px 13px;
+      border-radius: 8px;
+      border: 1px solid #bad2f7;
+      font-size: 1rem;
+    }
+    .lib-search button {
+      background: #1260cc;
+      color: #fff;
+      border-radius: 10px;
+      border: none;
+      padding: 8px 19px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1.01rem;
+      box-shadow: 0 1px 5px #bad2f75a;
+    }
+    .lib-search button:hover { background: #094383; }
+    .books-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #eaf0fb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+    .books-table th, .books-table td {
+      border-bottom: 1px solid #bad2f7;
+      padding: 8px 6px;
+      font-size: 1.07rem;
+      text-align: left;
+    }
+    .books-table th { background: #d7e6ff; }
+    .borrow-btn {
+      background: #1260cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 0.93rem;
+    }
+    .borrow-btn:hover { background: #094383; }
+    .lib-message {
+      color: #1260cc;
+      margin-top: 16px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    const books = [
+      {id:1,title:"Data Structures in Python",author:"Jane Data",category:"Computer Science"},
+      {id:2,title:"Digital Circuits",author:"R. Smith",category:"Electrical"},
+      {id:3,title:"Advanced Chemistry",author:"A. Kumar",category:"Chemistry"},
+      {id:4,title:"Modern Physics",author:"M. Patel",category:"Physics"},
+      {id:5,title:"Artificial Intelligence",author:"J. Singhal",category:"Computer Science"},
+      {id:6,title:"Applied Mathematics",author:"C. Lee",category:"Mathematics"},
+      {id:7,title:"Robotics & Automation",author:"K. Verma",category:"Mechanical"},
+      {id:8,title:"Machine Learning Basics",author:"P. Mehta",category:"Computer Science"}
+    ];
+    function renderBooks(filter='') {
+      const tb = document.getElementById('booksBody');
+      tb.innerHTML = '';
+      books.filter(b=>b.title.toLowerCase().includes(filter.toLowerCase()) || b.author.toLowerCase().includes(filter.toLowerCase())).forEach(book => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${book.title}</td><td>${book.author}</td><td>${book.category}</td>
+          <td><button class="borrow-btn" onclick="borrowBook('${book.title}')">Borrow</button></td>`;
+        tb.appendChild(row);
+      });
+      if(tb.innerHTML === '') document.getElementById('libMsg').innerText = 'No books found.';
+      else document.getElementById('libMsg').innerText = '';
+    }
+    function searchBooks() {
+      const val = document.getElementById('libSearch').value;
+      renderBooks(val);
+    }
+    function borrowBook(title) {
+      document.getElementById('libMsg').innerText = `Book "${title}" borrowed!`;
+      setTimeout(()=>{document.getElementById('libMsg').innerText='';},2000);
+    }
+    window.onload = ()=>renderBooks();
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Project Portal</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="task1.html">Personal Website</a></li>
+      <li><a href="task2.html">IRCTC Analysis</a></li>
+      <li><a href="task3.html">Alphabet Chart</a></li>
+      <li><a href="task4.html">Periodic Table</a></li>
+      <li><a href="task5.html">Course Registration</a></li>
+      <li><a href="task6.html">Library System</a></li>
+      <li><a href="task7.html">Marks Display</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h2 style="color:#1260cc;">Library Management System Demo</h2>
+      <p>Search for books, view details, and borrow instantly!</p>
+    </section>
+    <section>
+      <div class="library-container">
+        <h3 class="library-header"><i class="fa fa-book"></i> VIT Library</h3>
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search by title or author">
+          <button onclick="searchBooks()"><i class="fa fa-search"></i> Search</button>
+        </div>
+        <table class="books-table">
+          <thead>
+            <tr>
+              <th>Title</th><th>Author</th><th>Category</th><th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="booksBody"></tbody>
+        </table>
+        <div id="libMsg" class="lib-message"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>VIT Project &copy; 2025</p>
+  </footer>
+</body>
+</html>
